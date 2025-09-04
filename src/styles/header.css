@@ -1,0 +1,13 @@
+header.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2.75rem 2.875rem;
+}
+
+@media (width >= 80rem) {
+  header.logo {
+    justify-content: start;
+    margin-block: 4.75rem 5.5625rem;
+  }
+}
