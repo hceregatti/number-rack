@@ -35,25 +35,43 @@
 						<div class="input-wrapper">
 							<div class="inner-input">
 								<label for="numbers">Números</label>
-								<input type="number" name="numbers" id="numbers" />
+								<div class="input-outline">
+									<input type="text" name="numbers" id="numbers" />
+								</div>
 							</div>
 							<div class="inner-input">
 								<label for="from">De</label>
-								<input type="number" name="from" id="from" />
+								<div class="input-outline">
+									<input type="text" name="numbers" id="numbers" />
+								</div>
 							</div>
 							<div class="inner-input">
 								<label for="to">Até</label>
-								<input type="number" name="to" id="to" />
-							</div>
-
-							<div class="radio-input">
-								<input type="radio" name="repeat-number" id="repeat-number" />
-								<span class="toggle-input"></span>
-								<span class="label-toggle">Não repetir número</span>
+								<div class="input-outline">
+									<input type="text" name="numbers" id="numbers" />
+								</div>
 							</div>
 						</div>
-						<button type="submit" name="submit" id="btn-raffle">
-							Sortear <span class="arrow-icon">icon</span>
+						<div class="checkbox-input">
+							<input
+								type="checkbox"
+								name="repeat-number"
+								id="repeat-number"
+								checked
+							/>
+							<div class="toggle-input">
+								<span></span>
+							</div>
+							<span class="label-toggle">Não repetir número</span>
+						</div>
+
+						<button type="submit" name="submit" id="btn-submit">
+							<p>Sortear</p>
+							<span class="arrow-icon">
+								<img
+									src="/src/images/icons/btn-arrow.svg"
+									alt="icone de enviar"
+							/></span>
 						</button>
 					</form>
 				</div>
@@ -85,5 +103,6 @@
 				</div>
 			</section>
 		</div>
+		<script src="src/scripts/scripts.js"></script>
 	</body>
 </html>
