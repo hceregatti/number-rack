@@ -39,8 +39,8 @@
   --paragraph-md: 500 .875rem/1.5 var(--ff-roboto-flex);
   --paragraph-sm: 500 .75rem/1.5 var(--ff-roboto-flex);
   
-  --label-md: 700 1.25rem/1.5 var(--ff-roboto-flex);
-  --label-sm: 700 1rem/1.5 var(--ff-roboto-flex);
+  --label-lg: 700 1.25rem/1.5 var(--ff-roboto-flex);
+  --label-md: 700 1rem/1.5 var(--ff-roboto-flex);
 }
 
 html {

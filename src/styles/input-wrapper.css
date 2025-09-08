@@ -1,0 +1,40 @@
+.input-wrapper {
+  margin-block: 2.625rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-align: center;
+
+  & .inner-input {
+    & label {
+      font: var(--label-md);
+      text-transform: uppercase;
+    }
+
+    & .input-outline input {
+      width: 5.3125rem;
+      height: 3.5rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--bg-secondary);
+      border-radius: .5rem;
+      outline: none;
+
+      font: var(--display-sm);
+      color: var(--content-primary);
+      padding: .25rem .5rem;
+      text-align: center;
+    }
+  }
+
+  & :hover {
+    & label {
+      color: var(--content-brand);
+    }
+
+    & .input-outline input {
+      border: 1px solid transparent;
+      background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box, linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%) border-box;
+      border-radius: .5rem;
+    }
+  } 
+}
