@@ -45,11 +45,12 @@
 
 html {
   -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-primary);
 }
 
 body {
-  background-color: var(--bg-primary);
   color: var(--content-secondary);
+  background: url(/src/images/Shapes.svg) top/cover no-repeat;
 }
 
 label {

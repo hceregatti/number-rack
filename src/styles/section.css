@@ -1,37 +1,14 @@
 #app {
-	display: grid;
+  display: grid;
 
-	& .header-app {
-		& header {
-			& span {
-				font: var(--overline);
-				text-transform: uppercase;
-				background: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 150%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-			}
-
-			& h1 {
-				font: var(--display-md);
-				color: var(--content-primary);
-				text-transform: uppercase;
-			}
-		}
-	}
 }
 
 @media (width >= 80rem) {
-	#app {
-		grid-template-columns: 32rem 1fr;
-		gap: 6.75rem;
-
-		& .header-app {
-			& header {
-				& h1 {
-					font: var(--display-lg);
-				}
-			}
-		}
-	}
+  #app {
+    grid-template-columns: 32rem 1fr;
+    column-gap: 6.75rem;
+    & .desktop-layout {
+      max-width: 32rem;
+    }
+  }
 }

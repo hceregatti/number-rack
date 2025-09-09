@@ -1,0 +1,48 @@
+.checkbox-input {
+  display: flex;
+  column-gap: .5rem;
+  position: relative;
+
+  margin-bottom: 2.5rem;
+
+  & input[type="checkbox"]{
+    position: absolute;
+    width: 1.875rem;
+    height: 1.25rem;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  & .input-toggle {
+    position: relative;
+    width: 1.875rem;
+    height: 1.25rem;
+    background: var(--content-tertiary);
+    border-radius: 1rem;
+
+    & .toggle {
+      width: .875rem;
+      height: .875rem;
+      border-radius: 1rem;
+      background: var(--content-primary);
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      transform: translateY(-50%);
+      transition: all 500ms ease-in-out;
+    }
+  }
+
+  & p {
+    font: var(--paragraph-sm);
+    color: var(--content-primary);
+  }
+
+  & .input-toggle.active {
+    background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+
+    & .toggle {
+      left: 13px;
+    }
+  }
+}

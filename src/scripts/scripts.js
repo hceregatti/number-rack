@@ -1,10 +1,6 @@
 const checkbox = document.getElementById("repeat-number");
-const toggle = document.querySelector(".toggle-input");
+const input = document.querySelector(".input-toggle");
 
 checkbox.addEventListener("change", () => {
-  if (checkbox.checked) {
-    toggle.classList.add("active");
-  } else {
-    toggle.classList.remove("active");
-  }
-});
+    input.classList.toggle("active")
+  })

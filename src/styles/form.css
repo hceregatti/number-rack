@@ -1,52 +1,25 @@
-.items-form {
-  & form {
-    margin-top: 2.625rem;
+.form-wrapper {
+  & .raffle {
     & h2 {
       font: var(--label-lg);
       color: var(--content-primary);
       text-transform: uppercase;
     }
-
     & p {
       font: var(--paragraph-md);
-      color: var(--content-tertiary);
-    }
-
-    & button {
-      background-color: var(--bg-tertiary);
-      padding: 1rem 7.1666666667rem;
-      display: flex;
-      gap: .5rem;
-      border-radius: .5rem;
-      align-items: center;
-
-      margin-top: 2.5rem;
-
-      & p {
-        font: var(--label-md);
-        text-transform: uppercase;
-        color: var(--content-primary);
-      }
-
-      & .arrow-icon {
-        display: flex;
-        & img {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
-      }
+      margin-top: 2px;
     }
   }
 }
 
-@media (width >= 80rem) {
-  .items-form {
-    & form {
-      width: 30.125rem;
+@media (width >=80rem) {
+  .form-wrapper {
+    margin-top: 3.5rem;
 
+    & .raffle {
       & p {
-        font: var(--paragraph-lg);
-      }
+      font: var(--paragraph-lg);
+    }
     }
   }
 }

@@ -1,0 +1,29 @@
+.title {
+    margin-bottom: 2.625rem;
+
+  & span {
+    display: inline-block;
+    font: var(--overline);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 150%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-block: .75rem;
+  }
+
+  & h1 {
+     font: var(--display-md);
+     text-transform: uppercase;
+     color: var(--content-primary);
+  }
+}
+
+@media (width >= 80rem) {
+  .title {
+    & h1 {
+      font: var(--display-lg);
+    }
+  }
+}

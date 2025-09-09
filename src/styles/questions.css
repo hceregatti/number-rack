@@ -1,0 +1,31 @@
+.questions {
+  & div {
+    display: flex; 
+    align-items: flex-start;
+    column-gap: .5rem;
+      margin-bottom: 1.25rem;
+    
+    & div {
+      display: flex;
+      flex-direction: column;
+
+      & h3 {
+        font: var(--paragraph-md);
+        color: var(--content-brand);
+      }
+
+      & p {
+        font: var(--paragraph-sm);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
+
+@media (width >=80rem) {
+  .questions {
+    & div {
+      max-width: 24.125rem;
+    }
+  }
+}

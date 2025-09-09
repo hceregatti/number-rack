@@ -4,9 +4,21 @@
   margin-inline: auto;
 }
 
+.desktop-only {
+  display: none;
+}
+
 @media (width >= 80rem) {
   .container {
     --max-width: 80rem;
     width: min(var(--max-width), 100% - 7.5rem * 2);
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .mobile-only {
+    display: none;
   }
 }
