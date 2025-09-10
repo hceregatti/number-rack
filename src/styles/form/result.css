@@ -1,0 +1,171 @@
+.result {
+  margin-bottom: 10rem;
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      font: var(--label-lg);
+      text-transform: uppercase;
+      color: var(--content-primary);
+
+      margin-bottom: .25rem;
+    }
+
+    & p {
+      font: var(--overline);
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  & form {
+    display: grid;
+
+    & .result-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      margin-bottom: 2.5rem;
+
+      & .result-number {
+        & span {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & p.first-result {
+            font: 700 3rem/1.5 var(--ff-roboto-mono);
+            color: var(--content-primary);
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+            top: 1.1rem;
+            left: -15px;
+            transition: all ease-in-out;
+            animation: entryFirstNumber 2s 1s linear forwards;
+          }
+
+          & span.bg-number.first-number {
+            position: absolute;
+            width: 5.25rem;
+            height: 5.25rem;
+            background: var(--content-brand);
+            border-radius: 1.75rem;
+            z-index: 0;
+            opacity: 0;
+            top: 1rem;
+            left: -30px;
+            transition: all ease-in-out;
+            animation: entryBG 2.5s linear forwards;
+          }
+
+          & p.second-result {
+            font: 700 3rem/1.5 var(--ff-roboto-mono);
+            color: var(--content-primary);
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            top: 1.1rem;
+            left: 12px;
+            transition: all ease-in-out;
+            animation: entrySecondNumber 2s 5s linear forwards;
+          }
+
+          & span.bg-number.second-number {
+            position: absolute;
+            width: 5.25rem;
+            height: 5.25rem;
+            background: var(--content-brand);
+            border-radius: 1.75rem;
+            z-index: 0;
+            opacity: 0;
+            top: 1rem;
+            left: 0px;
+            transition: all ease-in-out;
+            animation: entryBG 2.5s 4s linear forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-repeat {
+  display: flex;
+  position: relative;
+  top: 6rem;
+  column-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  padding: 1rem 6.71875rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: .5rem;
+  opacity: 0;
+
+  font: var(--label-md);
+  color: var(--content-primary);
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: all 400ms ease-in-out;
+
+  animation: entryButton 800ms 6.5s ease-in forwards;
+}
+
+@keyframes entryBG {
+  0% { scale: 0; opacity: 1;} 
+  10% { scale: 1; opacity: 1}
+  15% {scale: 1; opacity: 1; rotate: 0deg;}
+  50% {scale: 1; rotate: 90deg; opacity: 1}
+  65% { scale: 1; rotate: 180deg; opacity: 1}
+  90% {scale: .9; rotate: 240deg; opacity: 1}
+  100% { scale: 0; rotate: 360deg; opacity: 0;}
+}
+
+@keyframes entryFirstNumber {
+  0% { scale: 0;}
+  10% { scale: 1.1; opacity: 1; color: var(--bg-secondary);}
+  50% { scale: 1.1; opacity: 1; color: var(--bg-secondary);}
+  65% { scale: 1.15; opacity: 1; color: var(--bg-secondary);}
+  66% { scale: 1.1; opacity: 1; color: var(--bg-secondary);}
+  80% { scale: 1.1; transform: translateX(0); opacity: 1; color: var(--content-brand);}
+  100% { transform: translateX(-40px); opacity: 1; color: var(--content-brand);}
+}
+
+@keyframes entrySecondNumber {
+  0% { scale: 0;}
+  10% { scale: 1; opacity: 1; color: var(--bg-secondary);}
+  50% { scale: 1; opacity: 1; color: var(--bg-secondary);}
+  65% { scale: 1.05; opacity: 1; color: var(--bg-secondary);}
+  66% { scale: 1; opacity: 1; color: var(--bg-secondary);}
+  80% { scale: 1; transform: translateX(0); opacity: 1; color: var(--content-brand);}
+  100% { transform: translateX(0px); opacity: 1; color: var(--content-brand);}
+}
+
+@keyframes entryButton {
+  0% { opacity: 0; scale: 0; }
+  80% { opacity: 0; scale: 0}
+  100% { opacity: 1; scale: 1;}
+}
+
+@media (width >=80rem) {
+  .result {
+    max-width: 30.125rem;
+    margin-top: 3.5rem;
+
+    & form {
+      & .btn-repeat {
+        padding: 1rem 11.8125rem;
+      }
+    }
+  }
+}
