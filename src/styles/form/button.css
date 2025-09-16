@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   position: relative;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
   align-items: center;
   justify-content: center;
   background: var(--bg-tertiary);
@@ -10,7 +10,7 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   font: var(--label-md);
   color: var(--content-primary);
@@ -28,18 +28,16 @@
   border-radius: inherit;
   background: linear-gradient(
     90deg,
-    #77C0AF 0%,
-    #D1DC97 14.84%,
-    #E9A9B3 32.15%,
-    #D586E0 65.79%,
-    #91A1FA 84.58%
+    #77c0af 0%,
+    #d1dc97 14.84%,
+    #e9a9b3 32.15%,
+    #d586e0 65.79%,
+    #91a1fa 84.58%
   );
   background-size: 300% 300%;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -50,31 +48,125 @@
 }
 
 .btn:hover {
-  animation: backgroundChange 3s ease forwards
+  animation: backgroundChange 3s ease forwards;
 }
 
 .btn:hover img {
   animation: arrowMove 3s ease forwards;
 }
 
+.result {
+  & .btn-repeat {
+    display: flex;
+    position: relative;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    padding: 1rem 6.71875rem;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 0.5rem;
+
+    font: var(--label-md);
+    color: var(--content-primary);
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    margin-bottom: 5rem;
+  }
+
+  & .btn-repeat:hover {
+    animation: backgroundChange 3s ease forwards;
+  }
+
+  .btn-repeat:hover img {
+    animation: spinIcon 2s ease forwards;
+  }
+
+  & .btn-repeat::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #77c0af 0%,
+      #d1dc97 14.84%,
+      #e9a9b3 32.15%,
+      #d586e0 65.79%,
+      #91a1fa 84.58%
+    );
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .btn-repeat:hover::before {
+  opacity: 1;
+  animation: gradientMove 3s ease forwards;
+}
+}
+
 @keyframes arrowMove {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(8px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; opacity: 1; }
-  80% { background-position: 100% 50%; opacity: 1; }
-  100% { background-position: 0% 50%; opacity: 0; }
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  80% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0;
+  }
 }
 
 @keyframes backgroundChange {
-  0% { background: var(--bg-secondary); }
-  90% { background: var(--bg-secondary); }
-  100% { background: var(--bg-tertiary); }
+  0% {
+    background: var(--bg-secondary);
+  }
+  90% {
+    background: var(--bg-secondary);
+  }
+  100% {
+    background: var(--bg-tertiary);
+  }
 }
 
+@keyframes spinIcon {
+  0% {
+    rotate: 0;
+  }
+
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
 
 @media (width >=80rem) {
   .btn {
