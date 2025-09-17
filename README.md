@@ -47,19 +47,3 @@ number-rack/
 2. Abra o arquivo `index.html` no navegador.\
    *(ou rode um servidor local como **`http-server`** ou **`live-server`** para desenvolvimento)*
 
----
-
-## 💡 Melhorias Futuras
-
-- Exportar resultados do sorteio em PDF/CSV
-- Temas personalizados (modo claro/escuro)
-- Histórico dos sorteios
-- Testes automatizados
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.\
-Sinta-se livre para usar, modificar e compartilhar.
-
