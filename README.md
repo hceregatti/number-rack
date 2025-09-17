@@ -13,20 +13,6 @@ Uma aplicação web simples para sortear e exibir números em uma interface din�
 
 ---
 
-## 📷 Preview
-
-### Tela principal
-
-
-
-### Sorteio em ação
-
-
-
-> Substitua as imagens acima (`projeto-desktop.png` e `projeto-mobile.png`) pelas capturas reais do seu projeto.
-
----
-
 ## 📂 Estrutura do Projeto
 
 ```
