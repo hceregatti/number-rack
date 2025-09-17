@@ -21,9 +21,12 @@
   justify-content: center;
   & .result-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
     justify-content: center;
     text-align: center;
-    padding: 4rem;
+    padding-block: 4rem;
+    max-width: 100%;
 
     & div {
       display: flex;
@@ -62,9 +65,12 @@
         & .bg-result {
           width: 5.25rem;
           height: 5.25rem;
+          scale: 0;
           background: var(--content-brand);
           border-radius: 1.75rem;
+        }
 
+        .animation-bg {
           animation: spin 4s ease forwards;
         }
       }
@@ -74,10 +80,10 @@
 
 @keyframes spin {
   0% { scale: 0.5; opacity: 0;}
-  10% { scale: 1; opacity: 1;}
-  25% { transform: rotate(180deg);}
-  50% { transform: rotate(240deg);}
-  80% { scale: 1; transform: rotate(300deg); opacity: 1;}
+  10% { scale: 1.2; opacity: 1;}
+  25% { scale: 1.2; transform: rotate(180deg);}
+  50% { scale: 1.2; transform: rotate(240deg);}
+  80% { scale: 1.2; transform: rotate(300deg); opacity: 1;}
   100% { scale: 0; transform: rotate(450deg); opacity: 0;}
 }
 

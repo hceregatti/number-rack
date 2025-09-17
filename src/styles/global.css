@@ -46,6 +46,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 body {

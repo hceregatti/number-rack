@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="form-wrapper hidden">
+        <div class="form-wrapper">
           <div class="raffle">
             <h2>Quero sortear:</h2>
             <p>
@@ -60,16 +60,16 @@
           <form action="#" id="form">
             <div class="input-wrapper">
               <div class="inner-input">
-                <label for="number">Números</label>
-                <input type="text" name="number" id="number" />
+                <label for="quantity">Números</label>
+                <input type="text" name="quantity" id="quantity" />
               </div>
               <div class="inner-input">
-                <label for="from">De</label>
-                <input type="text" name="from" id="from" />
+                <label for="min">De</label>
+                <input type="text" name="min" id="min" />
               </div>
               <div class="inner-input">
-                <label for="to">De</label>
-                <input type="text" name="to" id="to" />
+                <label for="max">De</label>
+                <input type="text" name="max" id="max" />
               </div>
             </div>
 
@@ -80,7 +80,7 @@
                 id="repeat-number"
                 checked
               />
-              <div class="input-toggle">
+              <div class="input-toggle active">
                 <span class="toggle"></span>
               </div>
               <p>Não repetir número</p>
@@ -96,21 +96,14 @@
           </form>
         </div>
 
-        <div class="result">
+        <div class="result hidden">
           <header>
             <h2>Resultado do sorteio</h2>
             <p>1º resultado</p>
           </header>
           <form action="#" id="form-repeat">
             <div class="result-wrapper">
-              <div id="result">
-                <span>
-                  <p class="number-result">23</p>
-                  <div class="wrapper-bg">
-                    <span class="bg-result"></span>
-                  </div>
-                </span>
-              </div>
+            
             </div>
             <button class="btn-repeat">
               <p>Sortear novamente</p>
@@ -149,4 +142,3 @@
     <script src="/src/scripts/scripts.js"></script>
   </body>
 </html>
-†=
